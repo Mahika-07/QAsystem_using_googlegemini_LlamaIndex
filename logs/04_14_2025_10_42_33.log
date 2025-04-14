@@ -1,0 +1,3 @@
+[2025-04-14 10:42:44,047] 59 root - INFO - Indexing or loading index for: J2.pdf
+[2025-04-14 10:42:44,048] 64 root - INFO - Loading existing index from storage...
+[2025-04-14 10:42:44,099] 63 llama_index.core.indices.loading - INFO - Loading all indices.

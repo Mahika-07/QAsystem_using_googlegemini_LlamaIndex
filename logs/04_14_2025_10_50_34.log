@@ -1,0 +1,20 @@
+[2025-04-14 10:50:45,388] 59 root - INFO - 📄 Starting index process for: J2.pdf
+[2025-04-14 10:50:45,519] 73 root - INFO - 📦 Loading index from storage...
+[2025-04-14 10:50:45,567] 63 llama_index.core.indices.loading - INFO - Loading all indices.
+[2025-04-14 10:50:45,567] 82 root - INFO - ✅ Index ready.
+[2025-04-14 10:51:08,766] 59 root - INFO - 📄 Starting index process for: J2.pdf
+[2025-04-14 10:51:08,771] 73 root - INFO - 📦 Loading index from storage...
+[2025-04-14 10:51:08,839] 63 llama_index.core.indices.loading - INFO - Loading all indices.
+[2025-04-14 10:51:08,840] 82 root - INFO - ✅ Index ready.
+[2025-04-14 10:51:55,844] 59 root - INFO - 📄 Starting index process for: J3.pdf
+[2025-04-14 10:51:55,850] 77 root - INFO - 🆕 Creating new index...
+[2025-04-14 10:51:55,850] 38 root - INFO - Loading PDF from uploaded_pdfs/J3.pdf
+[2025-04-14 10:52:07,859] 82 root - INFO - ✅ Index ready.
+[2025-04-14 10:52:30,084] 59 root - INFO - 📄 Starting index process for: J3.pdf
+[2025-04-14 10:52:30,088] 73 root - INFO - 📦 Loading index from storage...
+[2025-04-14 10:52:30,165] 63 llama_index.core.indices.loading - INFO - Loading all indices.
+[2025-04-14 10:52:30,165] 82 root - INFO - ✅ Index ready.
+[2025-04-14 10:53:42,438] 59 root - INFO - 📄 Starting index process for: J3.pdf
+[2025-04-14 10:53:42,443] 73 root - INFO - 📦 Loading index from storage...
+[2025-04-14 10:53:42,519] 63 llama_index.core.indices.loading - INFO - Loading all indices.
+[2025-04-14 10:53:42,519] 82 root - INFO - ✅ Index ready.
