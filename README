@@ -5,6 +5,10 @@
 #pip install -r requirements.txt
 
 #also do pip install llama-index-llms-ollama
+#pip install rouge-score bert-score nltk scikit-learn
 
+#pip install rouge-score
 
 #python setup.py install
+
+

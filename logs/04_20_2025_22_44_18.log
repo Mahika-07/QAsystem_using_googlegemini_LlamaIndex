@@ -1,0 +1,4 @@
+[2025-04-20 22:46:52,842] 59 root - INFO - 📄 Starting index process for: J1.pdf
+[2025-04-20 22:46:53,105] 77 root - INFO - 🆕 Creating new index...
+[2025-04-20 22:46:53,105] 38 root - INFO - Loading PDF from uploaded_pdfs/J1.pdf
+[2025-04-20 22:47:05,738] 82 root - INFO - ✅ Index ready.

@@ -1,49 +1,15 @@
-# import streamlit as st
-# from QAWithPDF.data_ingestion import load_data
-# from QAWithPDF.embedding import download_gemini_embedding
-# from QAWithPDF.model_api import load_model
-
-    
-# def main():
-#     st.set_page_config("QA with Documents")
-    
-#     doc=st.file_uploader("upload your document")
-    
-#     st.header("QA with Documents(Information Retrieval)")
-    
-#     user_question= st.text_input("Ask your question")
-    
-#     if st.button("submit & process"):
-#         with st.spinner("Processing..."):
-#             document=load_data(doc)
-#             model=load_model()
-#             query_engine=download_gemini_embedding(model,document)
-                
-#             response = query_engine.query(user_question)
-                
-#             st.write(response.response)
-                
-                
-# if __name__=="__main__":
-#     main()          
-                
-    
-    
-    
-    
 import streamlit as st
 import os
-
 import pandas as pd
 import json
 import nltk
-
-# Download NLTK tokenizer if not already present
-nltk.download('punkt', quiet=True)
-
+import numpy as np  # Add this import to fix the error
 from Evaluation import load_ground_truth, find_ground_truth, compute_metrics
 from QAWithPDF.embedding import get_or_create_index
 from QAWithPDF.model_api import load_model
+
+# Download NLTK tokenizer if not already present
+nltk.download('punkt', quiet=True)
 
 UPLOAD_DIR = "uploaded_pdfs"
 
@@ -74,6 +40,15 @@ def main():
 
     user_question = st.text_input("Ask your question about the selected PDF:")
 
+    overall_metrics = {
+        "ROUGE-1": [],
+        "ROUGE-2": [],
+        "ROUGE-L": [],
+        "BLEU": [],
+        "Jaccard": [],
+        "BERTScore": [],
+        "Accuracy": []
+    }
 
     if st.button("Submit & Process") and selected_pdf and user_question:
         with st.spinner("Retrieving answer..."):
@@ -86,17 +61,35 @@ def main():
             response = query_engine.query(user_question)
             st.markdown("### 💬 Answer:")
             st.write(response.response)
+
             # Load ground truth CSV
             gt_df = load_ground_truth()
 
             ground_truth = find_ground_truth(gt_df, selected_pdf, user_question)
             if ground_truth:
                 metrics = compute_metrics(response.response, ground_truth)
-                st.markdown("### 📊 Evaluation Metrics:")
+                st.markdown("### 📊 Evaluation Metrics for this Question:")
                 st.json(metrics)
+
+                # Collect metrics for overall evaluation
+                for key in overall_metrics:
+                    overall_metrics[key].append(metrics.get(key, 0))
+
             else:
                 st.warning("⚠️ No matching ground truth found for this question in the CSV.")
 
+        # Compute and display overall evaluation summary
+        # if overall_metrics["ROUGE-1"]:
+        #     st.markdown("### 📊 Overall Model Evaluation Summary:")
+
+        #     # Calculate averages for each metric
+        #     avg_metrics = {key: round(np.mean(value), 4) for key, value in overall_metrics.items()}
+
+        #     st.json(avg_metrics)
+        #     # Optionally, display the summary as a table
+        #     st.write("#### Average Metrics Across All Questions:")
+        #     avg_table = pd.DataFrame([avg_metrics])
+        #     st.dataframe(avg_table)
 
 if __name__ == "__main__":
     main()

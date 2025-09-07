@@ -1,0 +1,4 @@
+[2025-04-20 22:54:56,181] 59 root - INFO - 📄 Starting index process for: J1.pdf
+[2025-04-20 22:54:56,343] 73 root - INFO - 📦 Loading index from storage...
+[2025-04-20 22:54:56,390] 63 llama_index.core.indices.loading - INFO - Loading all indices.
+[2025-04-20 22:54:56,391] 82 root - INFO - ✅ Index ready.

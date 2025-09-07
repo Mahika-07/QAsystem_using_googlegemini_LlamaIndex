@@ -1,0 +1,10 @@
+[2025-04-23 10:29:22,738] 59 root - INFO - 📄 Starting index process for: J1.pdf
+[2025-04-23 10:29:22,857] 73 root - INFO - 📦 Loading index from storage...
+[2025-04-23 10:29:22,903] 63 llama_index.core.indices.loading - INFO - Loading all indices.
+[2025-04-23 10:29:22,904] 82 root - INFO - ✅ Index ready.
+[2025-04-23 10:29:25,297] 83 absl - INFO - Using default tokenizer.
+[2025-04-23 10:30:05,934] 59 root - INFO - 📄 Starting index process for: J1.pdf
+[2025-04-23 10:30:05,940] 73 root - INFO - 📦 Loading index from storage...
+[2025-04-23 10:30:06,015] 63 llama_index.core.indices.loading - INFO - Loading all indices.
+[2025-04-23 10:30:06,016] 82 root - INFO - ✅ Index ready.
+[2025-04-23 10:30:08,902] 83 absl - INFO - Using default tokenizer.

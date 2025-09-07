@@ -1,0 +1,6 @@
+[2025-04-23 09:15:07,021] 59 root - INFO - 📄 Starting index process for: J1.pdf
+[2025-04-23 09:15:07,272] 73 root - INFO - 📦 Loading index from storage...
+[2025-04-23 09:15:07,319] 63 llama_index.core.indices.loading - INFO - Loading all indices.
+[2025-04-23 09:15:07,319] 82 root - INFO - ✅ Index ready.
+[2025-04-23 09:15:09,637] 83 absl - INFO - Using default tokenizer.
+[2025-04-23 09:15:16,168] 1670 huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
